@@ -1,10 +1,11 @@
 package main
 
-import(
-	"fmt"
-	"net/http"
+import (
 	"encoding/json"
+	"fmt"
 	"math/rand"
+	"net/http"
+	"os"
 	"time"
 )
 
@@ -246,5 +247,9 @@ func airyhandler(w http.ResponseWriter,r *http.Request){
 func main(){
 	http.HandleFunc("/",airyhandler)
 	fmt.Println("Server running on port 6969")
-	http.ListenAndServe(":6969",nil)
+	port:=os.Getenv("PORT")
+	if port==""{
+		port="6969"
+	}
+	http.ListenAndServe(":"+port,nil)
 }
