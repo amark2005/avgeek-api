@@ -6,9 +6,11 @@ A Minimal HTTP API server written in Go that **Returns** aircraft specifications
 
 This api provides a single endpoint that returns a randomly selected aircraft from an internal dataset. It delivers a structured `JSON` formatted data of Aircraft Worldwide.
 
+![alt text](image.png)
+
 ## Requirements
 
-* Go
+* **Go**
 
 ## Execution
 
